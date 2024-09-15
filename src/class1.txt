@@ -1,0 +1,35 @@
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import { fName, lName } from "../helpers";
+
+function App() {
+  const [foodName, setFoodName] = useState("");
+  const [food, setFood] = useState(["bread", "eggs", "titus", "spaghetti"]);
+
+
+  const handleAdd = () => {
+    setFood((prevFood) => [...prevFood, foodName])
+    setFoodName("");
+    // alert("Added Successfully");
+  }
+
+
+  return (
+    <>
+
+      <input type="text" value={foodName} onChange={(e) => setFoodName(e.target.value)}/>
+      <br />
+      <button onClick={handleAdd}>Add</button>
+      <br />
+      {
+        food.map((i, index) => (<p>{i}</p>))
+      }
+    </>
+  );
+}
+
+export default App;
+
+
+/*
+Add Delete functionality to each item and once the list reaches 10, use an alert that says list is full
