@@ -16,7 +16,10 @@ function Header() {
 
         <div>
           <Link to={"/login"}>
-          <button className='px-4 py-2 bg-purple-100 text-purple-600 rounded'>Login</button>
+          <button className='px-4 py-2 bg-purple-100 text-purple-600 rounded mr-4'>Login</button>
+          </Link>
+          <Link to={"/create-blog"}>
+          <button className='px-4 py-2 bg-purple-600 text-white rounded'>Blog +</button>
           </Link>
         </div>
       </div>

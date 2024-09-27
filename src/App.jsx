@@ -9,6 +9,8 @@ import {
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact";
 import Login from "./pages/Auth/Login";
+import CreateBlog from "./pages/Blogs/CreateBlog";
+import AllBlogs from "./pages/Blogs/AllBlogs";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -16,6 +18,8 @@ const App = () => {
       <Route>
         <Route index element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/create-blog" element={<CreateBlog />} />
+        <Route path="/all-blogs" element={<AllBlogs />} />
         <Route path="/login" element={<Login />} />
       </Route>
     )
